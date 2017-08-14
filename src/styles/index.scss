@@ -1,0 +1,24 @@
+/* Base Application Styles */
+$color: #49a9ee;
+
+.main {
+   font-size: 16px;
+   text-align: center;
+}
+
+// 当前路由样式
+
+.active {
+  color: $color;
+  font-size: 16px;
+  width: 100%;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    height: 2px;
+    background-color: $color;
+  }
+}
