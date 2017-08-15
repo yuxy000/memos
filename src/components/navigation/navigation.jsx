@@ -18,7 +18,7 @@ class Navigation extends Component {
                             activeOnlyWhenExact={true}
                             to="/"
                             label="全部"
-                            memoNumber={this.props.allMenos} />
+                            memoNumber={this.props.allMemos} />
                     </Col>
                     <Col span={6}>
                         <NavLink

@@ -51,7 +51,7 @@ class Header extends Component {
                 hint: '请输入20字以内'
             });
         } else if (text !== '') {
-            // TODO 添加新事项
+            this.props.onAdd(text);
             this.setState({
                 hidden: true
             });
