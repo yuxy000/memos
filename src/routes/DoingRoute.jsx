@@ -12,7 +12,6 @@ import {
 
 /**
  * `正在进行`组件
- * 
  * @class DoingRoute
  * @extends {Component}
  */

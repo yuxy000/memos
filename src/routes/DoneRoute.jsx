@@ -11,7 +11,6 @@ import {
 
 /**
  * `已完成`组件
- * 
  * @class DoneRoute
  * @extends {Component}
  */

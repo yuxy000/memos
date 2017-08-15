@@ -8,7 +8,6 @@ import { changeTodoToDoing, deleteTodo } from '../actions';
 
 /**
  * `新建事项`组件
- * 
  * @class TodoRoute
  * @extends {Component}
  */

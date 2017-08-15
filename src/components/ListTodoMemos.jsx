@@ -5,7 +5,6 @@ import { Collapse, Row, Col, Icon, Button } from 'antd';
 
 /**
  * `新建事项`组件
- * 
  * @class ListTodoMemos
  * @extends {Component}
  */
@@ -24,7 +23,7 @@ class ListTodoMemos extends Component {
 
     handleDel(e) {
        const changeIndex = e.target.getAttribute('data-key');
-       this.props.onDel(changeIndex); 
+       this.props.onDel(changeIndex);
     }
 
     render() {

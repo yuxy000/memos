@@ -1,14 +1,17 @@
-import { 
-    ADD_TODO, 
-    CHANGE_TODO_TO_DOING, 
+import {
+    ADD_TODO,
+    CHANGE_TODO_TO_DOING,
     CHANGE_DOING_TO_TODO,
     CHANGE_DOING_TO_DONE,
     CHANGE_DONE_TO_DOING,
-    DELETE_TODO 
+    DELETE_TODO
 } from '../actions';
 
 let todos;
 
+/**
+ * 初始化state数据
+ */
 (() => {
     if (localStorage.todos) {
         todos = JSON.parse(localStorage.todos);
@@ -18,13 +21,12 @@ let todos;
 })();
 
 const todolist = (state = todos, action) => {
-    console.log(action.type, ADD_TODO);
     switch (action.type) {
         /*
          * 添加新的事项
          * 并进行本地化存储
          * 使用ES6展开运算符链接新事项和旧事项
-         * JSON.stringify()进行对象深拷贝 
+         * JSON.stringify()进行对象深拷贝
          */
         case ADD_TODO:
             localStorage.setItem('todos', JSON.stringify([
@@ -47,7 +49,7 @@ const todolist = (state = todos, action) => {
                 }
             ];
         /*
-         * todo -> doing 
+         * todo -> doing
          */
         case CHANGE_TODO_TO_DOING:
             localStorage.setItem('todos', JSON.stringify([
@@ -68,7 +70,7 @@ const todolist = (state = todos, action) => {
                 ...state.slice(parseInt(action.index) + 1)
             ];
         /*
-         *  doing -> todo 
+         *  doing -> todo
          */
         case CHANGE_DOING_TO_TODO:
             localStorage.setItem('todos', JSON.stringify([
@@ -88,7 +90,7 @@ const todolist = (state = todos, action) => {
                 ...state.slice(parseInt(action.index) + 1)
             ];
         /*
-         * doing -> done 
+         * doing -> done
          */
         case CHANGE_DOING_TO_DONE:
             localStorage.setItem('todos', JSON.stringify([
@@ -128,7 +130,7 @@ const todolist = (state = todos, action) => {
                 ...state.slice(parseInt(action.index) + 1)
             ];
         /*
-         * 删除某个事项 
+         * 删除某个事项
          */
         case DELETE_TODO:
             localStorage.setItem('todos', JSON.stringify([

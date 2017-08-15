@@ -4,7 +4,6 @@ import NavLink from './navLink';
 
 /**
  * `导航`组件
- * 
  * @class Navigation
  * @extends {Comment}
  */

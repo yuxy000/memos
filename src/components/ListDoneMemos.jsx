@@ -4,7 +4,6 @@ import { Collapse, Row, Col, Button, Icon } from 'antd';
 
 /**
  * `已完成`组件
- * 
  * @class ListDoneMemos
  * @extends {Component}
  */
@@ -18,8 +17,7 @@ class ListDoneMemos extends Component {
 
     /**
      * done -> doing
-     * 
-     * @param {any} e 
+     * @param {any} e
      * @memberof ListDoneMemos
      */
     handleToDoing(e) {
@@ -29,8 +27,7 @@ class ListDoneMemos extends Component {
 
     /**
      * 删除事项
-     * 
-     * @param {any} e 
+     * @param {any} e
      * @memberof ListDoneMemos
      */
     handleDel(e) {

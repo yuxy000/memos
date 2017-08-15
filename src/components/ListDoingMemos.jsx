@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { Collapse, Row, Col, Icon, Button } from 'antd';
 
 /**
- * 
- * `正在进行组件`
- * 
+ * `正在进行`组件
  * @class ListDoingMemos
  * @extends {Component}
  */
@@ -20,8 +18,7 @@ class ListDoingMemos extends Component {
 
     /**
      * 改变状态 doing->todo
-     * 
-     * @param {any} e 
+     * @param {any} e
      * @memberof ListDoingMemos
      */
     handleToTodo(e) {
@@ -32,8 +29,7 @@ class ListDoingMemos extends Component {
 
     /**
      * 改变状态 doing->done
-     * 
-     * @param {any} e 
+     * @param {any} e
      * @memberof ListDoingMemos
      */
     handleToDone(e) {
@@ -43,8 +39,7 @@ class ListDoingMemos extends Component {
 
     /**
      * 删除事项
-     * 
-     * @param {any} e 
+     * @param {any} e
      * @memberof ListDoingMemos
      */
     handleDel(e) {

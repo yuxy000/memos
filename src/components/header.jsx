@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 /**
  * 头文件
- * 
  * @class Header
  * @extends {Component}
  */
@@ -24,8 +23,7 @@ class Header extends Component {
 
     /**
      * 响应键盘事件
-     * 
-     * @param {any} e 
+     * @param {any} e
      * @memberof Header
      */
     handleKeyUp(e) {
@@ -36,8 +34,7 @@ class Header extends Component {
 
     /**
      * 添加新事项并对输入字符做出判断
-     * 
-     * @param {any} e 
+     * @param {any} e
      * @memberof Header
      */
     handleClick(e) {

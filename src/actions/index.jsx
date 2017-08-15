@@ -11,8 +11,7 @@ export const DELETE_TODO = 'Delete_Todo';
 
 /**
  * action 创建函数 添加新事项
- * 
- * @param {String} text 
+ * @param {String} text
  */
 export const addTodo = (text) => {
     return (dispatch, getState) => {
@@ -41,7 +40,6 @@ export const addTodo = (text) => {
 
 /**
  * 状态由todo转为doing
- * 
  * @param {number} index 需要改变状态的事项下标
  */
 export const changeTodoToDoing = (index) => ({
@@ -51,7 +49,6 @@ export const changeTodoToDoing = (index) => ({
 
 /**
  * 状态由doing转为todo
- * 
  * @param {Number} index 需要改变状态的事项下标
  */
 export const changeDoingToTodo = (index) => ({
@@ -61,7 +58,6 @@ export const changeDoingToTodo = (index) => ({
 
 /**
  * 状态由doing转为done
- * 
  * @param {Number} index 需要改变状态的事项下标
  */
 export const changeDoingToDone = (index) => ({
@@ -71,7 +67,6 @@ export const changeDoingToDone = (index) => ({
 
 /**
  * 状态由done转为doing
- * 
  * @param {Nubmer} index 需要改变状态的事项下标
  */
 export const changeDoneToDoing = (index) => ({
@@ -81,7 +76,6 @@ export const changeDoneToDoing = (index) => ({
 
 /**
  * 删除事项
- * 
  * @param {Number} index 需要删除的事项下标
  */
 export const deleteTodo = (index) => ({
