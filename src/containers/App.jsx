@@ -5,13 +5,45 @@ import { Route, Switch } from 'react-router-dom';
 
 import Header from '../components/Header';
 import Navigation from '../components/navigation/navigation';
-import AllMemosRoute from '../routes/AllMemosRoute';
-import TodoRoute from '../routes/TodoRoute';
-import DoingRoute from '../routes/DoingRoute';
-import DoneRoute from '../routes/DoneRoute';
+// import AllMemosRoute from '../routes/AllMemosRoute';
+// import TodoRoute from '../routes/TodoRoute';
+// import DoingRoute from '../routes/DoingRoute';
+// import DoneRoute from '../routes/DoneRoute';
+
+import AllMR from 'bundle-loader?lazy!../routes/AllMemosRoute';
+import TodoR from 'bundle-loader?lazy!../routes/TodoRoute';
+import DoingR from 'bundle-loader?lazy!../routes/DoingRoute';
+import DoneR from 'bundle-loader?lazy!../routes/DoneRoute';
+
+import Bundle from './Bundle';
+
 
 import { addTodo } from '../actions';
 import '../styles/app.scss';
+
+const AllMemosRoute = (props) => (
+    <Bundle load={AllMR}>
+        {(AllMemosRoute) => <AllMemosRoute {...props} />}
+    </Bundle>
+);
+
+const TodoRoute = (props) => (
+    <Bundle load={TodoR}>
+        {(TodoRoute) => <TodoRoute {...props} />}
+    </Bundle>
+);
+
+const DoingRoute = (props) => (
+    <Bundle load={DoingR}>
+        {(DoingRoute) => <DoingRoute {...props} />}
+    </Bundle>
+);
+
+const DoneRoute = (props) => (
+    <Bundle load={DoneR}>
+        {(DoneRoute) => <DoneRoute {...props} />}
+    </Bundle>
+);
 
 class App extends Component {
     constructor(props) {
